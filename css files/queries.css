@@ -1,0 +1,71 @@
+@media only screen and (max-width:991px) {
+    /* manipulacion size y grid  */
+    html {
+        font-size: 56.25%;
+    }
+
+      #home {
+        grid-template-columns: 1fr;
+    }
+      #home img {
+        grid-row: 1;
+     }
+     #calculator .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #calculator{
+        grid-template-columns:1fr ;
+        grid-row: 1;
+    }
+    #calculator h2{
+        font-size:  3rem;
+    }
+    #calculator .card .search-card{
+        width: 100%;
+    }
+ /* section calculator tambien esta api 2 grids divisioncambio a 1 fr vista colum */
+    
+}
+
+@media only screen and (max-width: 767px){
+ html{
+    font-size: 50%;
+ }
+}
+
+
+@media only screen and (max-width: 575px){
+    html{
+       font-size: 46%;
+    }
+   }
+
+   @media screen and (min-width: 600px){
+    .meal-search-box{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .meal-item{
+        margin: 0;
+    }
+    .meal-details{
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    #meal{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

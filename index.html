@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- stylesheets -->
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- media queries -->
+    <link rel="stylesheet" href="./css files/queries.css" />
+
+    <title>Final Project</title>
+  </head>
+
+  <body>
+    <!-- scroll indicator -->
+    <div class="progress-container">
+      <div id="progress"></div>
+    </div>
+
+    <!-- navigation bar-->
+
+    <nav>
+      <a href="#home" id="logo">DomNutrition</a>
+      <i class="fas fa-bars" id="hamburger"></i>
+      <ul id="nav-bar">
+        <li>
+          <a href="#home">home</a>
+        </li>
+        <li>
+          <a href="#calculator">calculator</a>
+        </li>
+        <li>
+          <a href="#meal">nutrition</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- header -->
+    <header id="home">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>
+            ¡Bienvenido a nuestra página de nutrición, tu fuente de información
+            y apoyo para una alimentación saludable!
+          </h1>
+          <p>
+            Aquí encontrarás una amplia variedad de recetas deliciosas y
+            nutritivas, diseñadas para satisfacer tus necesidades dietéticas y
+            tus gustos personales. Pero eso no es todo. Nuestra página también
+            cuenta con una calculadora de Índice de Masa Corporal (IMC), una
+            herramienta que te ayudará a evaluar tu composición corporal y
+            establecer metas realistas para alcanzar un peso saludable. Además,
+            ofrecemos planes premium exclusivos para aquellos que deseen llevar
+            su bienestar al siguiente nivel.
+          </p>
+        </div>
+        <div class="hero-btn">
+          <a href="#result"><button class="btn-primary">Calculadora</button></a>
+          <a href="#meal">
+            <button class="btn-secondary">Recetas</button></a
+          >
+        </div>
+      </div>
+      <img src="./img/hero-image.jpg" alt="nutrition-image" />
+    </header>
+    <!-- calculator-->
+    <section id="calculator">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2>Calcule su Índice de Masa Corporal</h2>
+          <p>
+            El Indice de Masa Corporal (IMC) mide el contenido de grasa corporal
+            en relación a la estatura y el peso que presentan tanto los hombres
+            como las mujeres. Anote su peso y estatura usando el sistema
+            Standard sistema métrico (kilos, metros y centímetros). Hacer click
+            en la casilla “calcule” y aparecerá su IMC en el corazón de la
+            figura.
+          </p>
+          <h2>Clasificación del IMC:</h2>
+          <p>
+            <i> peso = menos de 18.5</i>
+            <br />
+            <i>Peso normal = 18.5–24.9</i>
+            <br />
+            <i>Sobrepeso = 25–29.9</i>
+            <br />
+            <i>Obesidad = IMC de 30 ó mayor</i>
+          </p>
+        </div>
+        <div class="card">
+          <form method="post">
+            <label for="height">Altura (cm):</label>
+            <input
+              type="text"
+              id="height"
+              name="height"
+              class="form-control"
+              placeholder="Ingrese su Altura *"
+              value=""
+              required
+            />
+
+            <label for="weight">Peso (kg):</label>
+            <input
+              type="text"
+              id="weight"
+              name="weight"
+              class="form-control"
+              placeholder="Ingrese su peso*"
+              value=""
+              required
+            />
+            <button type="button" onclick="calculateBMI()">
+              Calcular IMC/BMI
+            </button>
+
+            <div id="result"></div>
+          </form>
+          
+        </div>
+       
+      </div>
+      <img src="./img/weight.png" alt="nutrition-image" />
+     
+    </section>
+    <!-- generador de recetas -->
+    <section class="hero-content">
+
+        <div class="hero-text">
+            <h2>Generador de recetas!</h2>
+            <p>
+              Aquí encontrarás una amplia variedad de recetas deliciosas y
+              nutritivas, diseñadas para satisfacer tus necesidades dietéticas y tus
+              gustos personales.
+
+             <p class="alert"> Instrucciones:
+              Paras generar la busqueda de un platillo, ingrese un ingrediente:
+              Ejemplo: chicken, beef, carrots, lamb
+            </p>
+
+            </p>
+            <div class="search-card">
+              <input
+                type="text"
+                placeholder="Ingrese el ingrediente"
+                id="search-input"
+                value=""
+                required
+              />
+              <button id="search-btn">Search</button>
+            </div>
+            <div id= "meal">
+                <!-- meal item 
+                 <div class = "meal-item">
+                  <div class = "meal-img">
+                    <img src = "./img/chicken.jpg" alt = "food">
+                  </div>
+                  <div class = "meal-name">
+                    <h3>Potato Chips</h3>
+                    <a href = "#" class = "recipe-btn">Get Recipe</a>
+                  </div>
+                </div> 
+                 end of meal item -->
+              
+            </div>
+            
+          
+          
+      
+            <div id="resultApi"></div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <h2>copyright Domenic Arias</h2>
+    </footer>
+    <!-- scroll to top -->
+    <button id="scroll-top-btn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- scripts -->
+    <script src="main.js"></script>
+    <script src="./js files/api.js"></script>
+    <script src="./js files/app.js"></script>
+  </body>
+</html>
