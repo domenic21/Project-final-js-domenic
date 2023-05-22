@@ -119,9 +119,8 @@ button, p, input[type="email"]{
 }
 
 /* nav */
-nav{
+.navbar{
     width:100% ;
-    display: flex;
     position: fixed;
     align-items: center;
     justify-content: space-between;
@@ -132,7 +131,7 @@ nav{
     backdrop-filter: blur(0.8rem);
 
 }
-nav .fas,
+.narbar ,
 #logo{
     font-size: var(--headingFontsize4);
 
@@ -142,13 +141,12 @@ nav .fas,
     font-weight: 700;
 
 }
-nav ul {
+.navbar ul {
     list-style: none;
-    display: flex;
-    justify-content: space-between;
+    
     gap: 2rem;
 }
-nav a {
+.navbar a {
     color: var(--blackShade1);
     text-decoration: none;
     display: block;
@@ -158,11 +156,9 @@ nav a {
 
 }
 
-nav i.fas{
-    display: none;
-}
+
 /* nav hover */
-nav li a::before{
+.navbar li a::before{
     content: "";
     position: absolute;
     background-color: transparent;
@@ -175,7 +171,7 @@ nav li a::before{
 
 }
 
-nav li a:hover::before{
+.navbar li a:hover::before{
     background-color: var(--baseShade1);
     width:100% ;
 }
@@ -265,9 +261,10 @@ header img{
     background-color: var(--whiteShade2);
     border-radius: 15px;
     grid-template-columns: 100%  ;
- 
+    font-size: 20px;
     display: grid;
     gap: 1.2em;
+  
 }
 .search-card input{
     width: 80%;
