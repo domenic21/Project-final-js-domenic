@@ -18,7 +18,7 @@
   <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
   <!-- stylesheets -->
 
@@ -40,7 +40,8 @@
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">DomNutrition</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
@@ -54,12 +55,12 @@
           <li class="nav-item">
             <a class="nav-link" href="#calculator">Nutrition</a>
           </li>
-          
+
         </ul>
       </div>
     </div>
   </nav>
-  
+
   </nav>
   <!-- header -->
   <header id="home">
@@ -113,7 +114,7 @@
         </p>
       </div>
       <div class="card">
-        <form >
+        <form>
           <label for="height">Altura (cm):</label>
           <input type="text" id="height" name="height" class="form-control" placeholder="Ingrese su Altura *" value=""
             required />
@@ -154,7 +155,15 @@
         <input type="text" placeholder="Ingrese el ingrediente " id="search-input" value="" required />
         <button id="search-btn">Search</button>
       </div>
-      <div id="meal">
+      
+        <div class="album py-5 bg-light" id="meal">
+          <div class="container">
+        
+            
+          </div>
+        </div>
+
+
         <!-- meal item 
                  <div class = "meal-item">
                   <div class = "meal-img">
@@ -167,19 +176,64 @@
                 </div> 
                  end of meal item -->
 
-      </div>
-
-
-
-
       <div id="resultApi"></div>
     </div>
   </section>
 
   <!-- footer -->
-  <footer>
-    <h2>copyright Domenic Arias</h2>
+  <!----------------------- footer---------------------- -->
+  <footer class="footer">
+    <div class="container py-4 ">
+      <div class="row py-4 ">
+        <div class="col-lg-4">
+          <h4>DomNutriion </h4>
+          <p class="py-4">
+            "Compromised to give our clients the best services in order to achieve their goals! Sign up!"
+
+          </p>
+          <section class="social">
+            <ul class="list-unstyled d-flex">
+
+              <a class="social bi bi-facebook px-2" href="https://www.facebook.com/profile.php?id=100063756834397"
+                target="_blank"></a>
+              <a class=" social bi bi-whatsapp px-2" href="https://web.whatsapp.com/" target="_blank"></a>
+              <a class=" social bi bi-twitter px-2" href="https://twitter.com/?lang=es" target="_blank"></a>
+
+            </ul>
+          </section>
+
+        </div>
+        <div class="col-lh-3 0ffset col-md-3 col-sm-4 col-11 mb-2">
+          <h5 class="pb-4 d-sm-block">QUICK LINKS</h5>
+          <p class="link"> <span> <i class="bi bi-arrow-right-short"></i> About Us</span></p>
+          <p class="link"> <span> <i class="bi bi-arrow-right-short"></i> FAQ</span></p>
+          <p class="link"> <span> <i class="bi bi-arrow-right-short"></i> Privacy policy</span></p>
+          <p class="link"> <span> <i class="bi bi-arrow-right-short"></i> Terms & Conditions </span></p>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="pb-4 d-sm-block"> CONTACT US</h5>
+          <p class="link pt-2"><span> <i class="bi bi-envelope-at"></i> domfortantraining@gmail.com </span>
+          </p>
+          <p class="link pt-2"> <span> <i class="bi bi-telephone-forward"></i> +1 (***)*** </span></p>
+
+
+        </div>
+
+
+
+
+
+      </div>
+      <p>© 2023 Domenic Arias, Inc. All rights reserved.</p>
+
+
+    </div>
+
+
+
+
   </footer>
+
   <!-- scroll to top -->
   <button id="scroll-top-btn">
     <i class="fas fa-arrow-up"></i>
@@ -195,3 +249,5 @@
 </body>
 
 </html>
+
+

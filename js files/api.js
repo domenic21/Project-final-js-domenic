@@ -12,34 +12,37 @@ const mealList = document.getElementById('meal');
 searchBtn.addEventListener('click', ApiList);
 
 // function 
-function ApiList(){
+function ApiList() {
     let searchInput = document.getElementById('search-input').value;
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInput}`)
-    .then(response => response.json())
-    .then(data => {
-        let html = "";
-        if(data.meals){
-            data.meals.forEach(meal => {
-                html += `
-                    <div class = "meal-item" data-id = "${meal.idMeal}">
-                        <div class = "meal-img">
-                            <img src = "${meal.strMealThumb}" alt = "food">
-                        </div>
-                        <div class = "meal-name">
-                            <h3>${meal.strMeal}</h3>
-                            
-                        </div>
+        .then(response => response.json())
+        .then(data => {
+            let html = "";
+            if (data.meals) {
+                data.meals.forEach(meal => {
+                    html += `
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                <div class="card shadow-sm" data-id = "${meal.idMeal}">
+                <img src = "${meal.strMealThumb}" alt = "food"class="meal-img">
+                    <div class="card-body">
+                    <p class="card-text"> ${meal.strMeal}</p>
+                    <p class = "card-text">receta  </p>
+                    
                     </div>
+                </div>
+                </div>
+            </div>
                 `;
-            });
-            
-        } else{
-          html= "error!";
-            mealList.classList.add('notFound');
-        }
+                });
 
-        mealList.innerHTML = html;
-    });
+            } else {
+                html = "error!";
+                mealList.classList.add('notFound');
+            }
+
+            mealList.innerHTML = html;
+        });
 }
 
 
